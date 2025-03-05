@@ -1,0 +1,28 @@
+.header {
+  position: relative;
+  margin: 45px auto 0;
+  width: 100%;
+  /* max-width: calc(100%-40px);
+  using 880 instead for simplicity */
+  max-width: 880px;
+  box-sizing: border-box;
+}
+
+.header__image {
+  margin-bottom: 41px;
+  height: 33px;
+  width: 173px;
+}
+
+@media screen and (max-width: 775px) {
+  .header {
+    margin: 28px 0 0;
+    max-width: 100%;
+  }
+
+  .header__image {
+    margin: 0 0 32px 27px;
+    height: 24px;
+    width: 126px;
+  }
+}
