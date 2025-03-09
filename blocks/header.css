@@ -6,6 +6,7 @@
   using 880 instead for simplicity */
   max-width: 880px;
   box-sizing: border-box;
+  border-bottom: 1px solid rgb(84 84 84 / 0.7);
 }
 
 .header__image {
