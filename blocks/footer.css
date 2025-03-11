@@ -5,17 +5,17 @@
 }
 
 .footer__copyright {
+  margin-top: 0;
+  margin-bottom: 0;
   color: #545454;
   font-family: "Inter", "Arial", sans-serif;
   font-size: 18px;
   line-height: 1.25;
-  justify-self: start;
 }
 
 @media screen and (max-width: 775px) {
   .footer {
     padding: 48px 0 36px;
-    width: 50%;
   }
 
   .footer__copyright {
