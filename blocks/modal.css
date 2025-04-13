@@ -6,13 +6,13 @@
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
-  /* display: none; */
+  display: none;
   display: flex;
 }
 
-/* .modal_opened {
+.modal__container_opened {
   display: flex;
-} */
+}
 
 .modal__container {
   position: relative;
@@ -23,6 +23,17 @@
   width: 430px;
   height: 330px;
 }
+
+/* .modal__container_modal_opened {
+  display: flex;
+  position: relative;
+  padding: 34px 36px 0;
+  background-color: #fff;
+  margin: auto;
+  border-radius: 10px;
+  width: 430px;
+  height: 330px;
+} */
 
 .modal__close {
   position: absolute;
