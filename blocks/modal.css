@@ -19,8 +19,6 @@
   background-color: #fff;
   margin: auto;
   border-radius: 10px;
-  width: 430px;
-  height: 330px;
 }
 
 .modal__close {
@@ -50,6 +48,7 @@
   position: relative;
   flex-direction: column;
   border-radius: 1px;
+  height: 330px;
 }
 
 .modal__heading {
@@ -59,13 +58,13 @@
   color: #000;
   width: 330px;
   height: 23px;
-  margin: 0 28px 54px 0;
+  margin: 0 0 54px 0;
 }
 
 .modal__input {
   border: none;
   outline: none;
-  padding: 0 0 13.34px;
+  padding: 0 0 13.26px;
   margin: 0 0 29.74px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   font-family: Inter, Helvetica, sans-serif;
@@ -74,6 +73,10 @@
   text-align: left;
   cursor: text;
   width: 100%;
+}
+
+#profile-description-input {
+  margin: 0 0 29.74px;
 }
 
 .modal__button {
@@ -96,7 +99,12 @@
   opacity: 80%;
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 510px) {
+  .modal__container {
+    padding: 22px 5px;
+    margin: auto;
+  }
+
   .modal__close {
     padding: 0 19px;
     width: 26px;
@@ -105,10 +113,11 @@
     left: calc(100% - 18.62px);
   }
 
-  .modal__container {
+  .modal__form {
     width: 282px;
     height: 322px;
-    padding: 22px 25px;
+    padding: 5px;
+    margin: auto;
   }
 
   .modal__heading {
@@ -124,7 +133,13 @@
 
   .modal__input {
     height: 27px;
+    width: 75%;
+    margin: auto;
     padding-bottom: 13px;
+  }
+
+  #profile-description-input {
+    margin: auto auto 29.74px;
   }
 
   .modal__button {

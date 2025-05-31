@@ -29,7 +29,7 @@ const initialCards = [
 const profileEditButton = document.querySelector("#profile-button-edit");
 const profileEditModal = document.querySelector("#profile-modal-edit");
 const profileEditCloseModal = document.querySelector("#profile-modal-close");
-const profileName = document.querySelector(".profile__title");
+const profileTitle = document.querySelector(".profile__title");
 const profileDescription = document.querySelector(".profile__description");
 const profileTitleInput = document.querySelector("#profile-title-input");
 const profileDescriptionInput = document.querySelector(
@@ -40,22 +40,22 @@ const profileEditForm = profileEditModal.querySelector(".modal__form");
 const cardsListElement = document.querySelector(".cards__list");
 const cardTemplate =
   document.querySelector("#card-template").content.firstElementChild;
+const cardLikeButton = document.querySelector(".card__like-button");
 
 // Functions
 
-function closePopup() {
+function closeProfileEditModal() {
   profileEditModal.classList.remove("modal__container_opened");
 }
 
 function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
+  console.log(cardElement);
   const cardImageElement = cardElement.querySelector(".card__image");
   cardImageElement.src = cardData.link;
   cardImageElement.alt = cardData.name;
-  const cardDescriptionElement =
-    cardElement.querySelector(".card__description");
-
-  cardDescriptionElement.textContent = cardData.name;
+  const cardTitleElement = cardElement.querySelector(".card__title");
+  cardTitleElement.textContent = cardData.name;
   return cardElement;
 }
 
@@ -63,20 +63,20 @@ function getCardElement(cardData) {
 
 function handleProfileEditSubmit(e) {
   e.preventDefault();
-  profileName.textContent = profileTitleInput.value;
+  profileTitle.textContent = profileTitleInput.value;
   profileDescription.textContent = profileDescriptionInput.value;
-  closePopup();
+  closeProfileEditModal();
 }
 
 // Event Listeners
 
 profileEditButton.addEventListener("click", () => {
-  profileTitleInput.value = profileTitleInput.textContent;
-  profileDescriptionInput.value = profileDescriptionInput.textContent;
+  profileTitleInput.value = profileTitle.textContent;
+  profileDescriptionInput.value = profileDescription.textContent;
   profileEditModal.classList.add("modal__container_opened");
 });
 
-profileEditCloseModal.addEventListener("click", closePopup);
+profileEditCloseModal.addEventListener("click", closeProfileEditModal);
 
 profileEditForm.addEventListener("submit", handleProfileEditSubmit);
 
