@@ -100,50 +100,53 @@
 }
 
 @media screen and (max-width: 510px) {
+  .modal {
+    display: flex;
+  }
+
   .modal__container {
-    padding: 22px 5px;
-    margin: auto;
+    width: 100%;
+    max-width: 282px;
+    padding: 24px;
+    box-sizing: border-box;
   }
 
   .modal__close {
-    padding: 0 19px;
+    left: calc(100% - 30px);
     width: 26px;
     height: 26px;
-    bottom: calc(100% + 13.62px);
-    left: calc(100% - 18.62px);
   }
 
   .modal__form {
-    width: 282px;
-    height: 322px;
-    padding: 5px;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
 
   .modal__heading {
-    height: 22px;
-    width: 238px;
     font-size: 18px;
     margin-bottom: 75px;
-  }
-
-  .modal__form-fields {
-    width: 238px;
+    text-align: left;
+    width: 100%;
   }
 
   .modal__input {
-    height: 27px;
-    width: 75%;
-    margin: auto;
+    font-size: 14px;
     padding-bottom: 13px;
   }
 
+  #profile-title-input {
+    margin-bottom: 30px;
+  }
+
   #profile-description-input {
-    margin: auto auto 29.74px;
+    margin-bottom: 45px;
   }
 
   .modal__button {
-    height: 46px;
     font-size: 14px;
+    height: 46px;
+    border: none;
+    border-radius: 4px;
   }
 }
